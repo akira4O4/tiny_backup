@@ -7,12 +7,23 @@ from loguru import logger
 
 
 class BackupTimer:
-    def __init__(self, interval: int, input_dir: str, output_dir: dir):
+    def __init__(self, interval: int, input_dir: str=None, output_dir: dir=None):
+        
         if not os.path.exists(input_dir):
             logger.error(f'Input dir is not found.')
             exit(1)
+        
         if interval < 0:
             logger.error(f'Timer interval must be > 0.')
+            exit(1)
+        
+        if input_dir is None:
+            logger.error(f'Input dir is None.')
+            exit(1)
+        
+        if output_dir is None:
+            logger.error(f'Output dir is None.')
+            exit(1)
 
         self.interval = interval
         self.input_dir = input_dir
