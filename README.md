@@ -9,7 +9,7 @@ A Simple Tiny file backup program
 
 ## Install
 ```bash
-git clone 
+git clone https://github.com/akira4O4/tiny_backup.git
 pip install -r requirements.txt
 ```
 
