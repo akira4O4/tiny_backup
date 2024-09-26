@@ -1,0 +1,8 @@
+interval: 1 # minutes
+input: D:\llf\code\game-backup\asset\save
+output: D:\llf\code\game-backup\asset\output
+
+loguru:
+  rotation: "1 day"
+  retention: "7 days"
+  compression: "zip"
