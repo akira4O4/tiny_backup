@@ -39,12 +39,12 @@ class BackupTimer:
 
     def backup(self) -> None:
         curr_time = time.strftime(self.format, time.localtime())
-        logger.info(f"\nBackup time: {curr_time}")
+        logger.info(f"Backup time: {curr_time}")
 
         zip_file_name = os.path.join(self.output_dir, f"backup_{curr_time}.zip")
         try:
             shutil.make_archive(zip_file_name.replace('.zip', ''), 'zip', self.input_dir)
-            logger.info(f"Folder '{self.input_dir}' has been compressed to '{zip_file_name}'")
+            logger.info(f"Folder '{self.input_dir}' has been compressed to '{zip_file_name}'\n")
         except Exception as e:
             logger.error(f"Error while compressing folder: {e}")
 
