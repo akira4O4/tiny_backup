@@ -13,6 +13,7 @@ if __name__ == '__main__':
     logger.info(f'Time interval: {config["interval"]} minutes')
     logger.info(f'Backup Dir: {config["input"]}')
     logger.info(f'Save to: {config["output"]}')
+    logger.info(f'Is zip: {config["is_zip"]}')
     check_dir(config['output'])
 
     # Init loguru
@@ -28,7 +29,8 @@ if __name__ == '__main__':
     bt = BackupTimer(
         config['interval'],
         config['input'],
-        config['output']
+        config['output'],
+        config['is_zip']
     )
 
     try:

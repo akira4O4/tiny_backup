@@ -1,6 +1,7 @@
-interval: 1 # minutes
-input: D:\llf\code\game-backup\asset\save
-output: D:\llf\code\game-backup\asset\output
+interval: 30 # minutes
+input: ""
+output: ""
+is_zip: false
 
 loguru:
   rotation: "1 day"
